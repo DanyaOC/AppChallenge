@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation"
+    app:startDestination="@id/categoryFragment3">
+    <fragment
+        android:id="@+id/categoryFragment3"
+        android:name="edu.itesm.appchallenge.CategoryFragment"
+        android:label="fragment_category"
+        tools:layout="@layout/fragment_category" >
+        <action
+            android:id="@+id/action_categoryFragment3_to_fieldsFragment2"
+            app:destination="@id/fieldsFragment2" />
+    </fragment>
+    <fragment
+        android:id="@+id/fieldsFragment2"
+        android:name="edu.itesm.appchallenge.FieldsFragment"
+        android:label="fragment_fields"
+        tools:layout="@layout/fragment_fields" />
+</navigation>
