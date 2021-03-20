@@ -43,18 +43,11 @@ class CategoryFragment : Fragment() {
     override fun onActivityCreated(savedInstanceState: Bundle?) {
         super.onActivityCreated(savedInstanceState)
         fields.setOnClickListener{
-            view?.findNavController()?.navigate(R.id.action_categoryFragment3_to_fieldsFragment2)
+            view?.findNavController()?.navigate(R.id.action_categoryFragment_to_fieldsFragment)
         }
         lakes.setOnClickListener{
-            //view?.findNavController()?.navigate(R.id.action_categoryFragment_to_lakesFragment)
+            view?.findNavController()?.navigate(R.id.action_categoryFragment_to_lakesFragment)
         }
-        hills.setOnClickListener{
-            //view?.findNavController()?.navigate(R.id.action_categoryFragment_to_hillsFragment)
-        }
-        sky.setOnClickListener{
-            //view?.findNavController()?.navigate(R.id.action_categoryFragment_to_skyFragment)
-        }
-
     }
 
 }

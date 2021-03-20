@@ -3,19 +3,54 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/navigation"
-    app:startDestination="@id/categoryFragment3">
+    app:startDestination="@id/categoryFragment">
+
     <fragment
-        android:id="@+id/categoryFragment3"
+        android:id="@+id/categoryFragment"
         android:name="edu.itesm.appchallenge.CategoryFragment"
         android:label="fragment_category"
         tools:layout="@layout/fragment_category" >
         <action
-            android:id="@+id/action_categoryFragment3_to_fieldsFragment2"
-            app:destination="@id/fieldsFragment2" />
+            android:id="@+id/action_categoryFragment_to_lakesFragment"
+            app:destination="@id/lakesFragment" />
+        <action
+            android:id="@+id/action_categoryFragment_to_fieldsFragment"
+            app:destination="@id/fieldsFragment" />
     </fragment>
     <fragment
-        android:id="@+id/fieldsFragment2"
+        android:id="@+id/lakesFragment"
+        android:name="edu.itesm.appchallenge.LakesFragment"
+        android:label="fragment_lakes"
+        tools:layout="@layout/fragment_lakes" >
+        <action
+            android:id="@+id/action_lakesFragment_to_lakeCreatureFragment"
+            app:destination="@id/lakeCreatureFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/lakeCreatureFragment"
+        android:name="edu.itesm.appchallenge.LakeCreatureFragment"
+        android:label="fragment_lake_creature"
+        tools:layout="@layout/fragment_lake_creature" >
+        <argument
+            android:name="lakeArgs"
+            app:argType="edu.itesm.appchallenge.Lakes" />
+    </fragment>
+    <fragment
+        android:id="@+id/fieldsFragment"
         android:name="edu.itesm.appchallenge.FieldsFragment"
         android:label="fragment_fields"
-        tools:layout="@layout/fragment_fields" />
+        tools:layout="@layout/fragment_fields" >
+        <action
+            android:id="@+id/action_fieldsFragment_to_fieldCreatureFragment"
+            app:destination="@id/fieldCreatureFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/fieldCreatureFragment"
+        android:name="edu.itesm.appchallenge.FieldCreatureFragment"
+        android:label="fragment_field_creature"
+        tools:layout="@layout/fragment_field_creature" >
+        <argument
+            android:name="fieldArgs"
+            app:argType="edu.itesm.appchallenge.Fields" />
+    </fragment>
 </navigation>

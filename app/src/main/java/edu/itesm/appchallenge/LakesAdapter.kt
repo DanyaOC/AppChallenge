@@ -8,36 +8,36 @@ import android.widget.TextView
 import androidx.navigation.findNavController
 import androidx.recyclerview.widget.RecyclerView
 
-class FieldsAdapter (private val fields_list : List<Fields>)
-    : RecyclerView.Adapter<FieldsAdapter.FieldsViewHolder>(){
+class LakesAdapter (private val lakes_list : List<Lakes>)
+    : RecyclerView.Adapter<LakesAdapter.LakesViewHolder>(){
 
-    inner class FieldsViewHolder(renglon: View) : RecyclerView.ViewHolder(renglon){
+    inner class LakesViewHolder(renglon: View) : RecyclerView.ViewHolder(renglon){
         var name = renglon.findViewById<TextView>(R.id.name)
         var description = renglon.findViewById<TextView>(R.id.description)
         var picture = renglon.findViewById<ImageView>(R.id.picture)
     }
 
     //Crea el renglón
-    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): FieldsViewHolder {
+    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): LakesViewHolder {
         val inflater = LayoutInflater.from(parent.context)
         val renglon_vista = inflater.inflate(R.layout.lakes_renglon,parent, false)
-        return FieldsViewHolder(renglon_vista)
+        return LakesViewHolder(renglon_vista)
     }
 
     //Asocia datos con los elementos del renglón
-    override fun onBindViewHolder(holder: FieldsViewHolder, position: Int) {
-        val fields= fields_list[position]
-        holder.picture.setImageResource(fields.picture)
-        holder.name.text = fields.name
-        holder.description.text = fields.description
+    override fun onBindViewHolder(holder: LakesViewHolder, position: Int) {
+        val lakes= lakes_list[position]
+        holder.picture.setImageResource(lakes.picture)
+        holder.name.text = lakes.name
+        holder.description.text = lakes.description
         holder.itemView.setOnClickListener {
-            val action = FieldsFragmentDirections.actionFieldsFragmentToFieldCreatureFragment(fields)
+            val action = LakesFragmentDirections.actionLakesFragmentToLakeCreatureFragment(lakes)
             holder.itemView.findNavController().navigate(action)
         }
     }
 
     // Cuantos elementos tiene la lista
     override fun getItemCount(): Int {
-        return fields_list.size
+        return lakes_list.size
     }
 }
