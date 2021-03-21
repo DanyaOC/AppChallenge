@@ -48,6 +48,9 @@ class CategoryFragment : Fragment() {
         lakes.setOnClickListener{
             view?.findNavController()?.navigate(R.id.action_categoryFragment_to_lakesFragment)
         }
+        hills.setOnClickListener{
+            view?.findNavController()?.navigate(R.id.action_categoryFragment_to_hillsFragment)
+        }
     }
 
 }

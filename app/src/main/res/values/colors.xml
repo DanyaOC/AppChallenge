@@ -16,4 +16,9 @@
     <color name="light_brown">#795548</color>
     <color name="icons">#212121</color>
     <color name="divider">#BDBDBD</color>
+    <color name="light_blue"> #72D6CE</color>
+    <color name="sea_blue"> #72A7D6 </color>
+    <color name="light_green">#93E173</color>
+    <color name="dirt"> #DEA788 </color>
+
 </resources>

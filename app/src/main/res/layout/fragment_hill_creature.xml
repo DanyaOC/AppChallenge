@@ -4,12 +4,12 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".LakeCreatureFragment">
+    tools:context=".HillCreatureFragment">
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="@color/sea_blue"
+        android:background="@color/dirt"
         android:orientation="horizontal"
         android:padding="10dp"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -34,18 +34,18 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="name"
-                android:textStyle="bold"
+                android:textColor="@color/brown"
                 android:textSize="20sp"
-                android:textColor="@color/brown" />
+                android:textStyle="bold" />
 
             <TextView
                 android:id="@+id/description"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="description"
-                android:textStyle="bold"
+                android:textColor="@color/black"
                 android:textSize="20sp"
-                android:textColor="@color/black" />
+                android:textStyle="bold" />
 
         </LinearLayout>
     </LinearLayout>

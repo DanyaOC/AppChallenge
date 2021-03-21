@@ -5,6 +5,7 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.TextView
+import android.widget.Toast
 import androidx.navigation.findNavController
 import androidx.recyclerview.widget.RecyclerView
 
@@ -33,6 +34,7 @@ class FieldsAdapter (private val fields_list : List<Fields>)
         holder.itemView.setOnClickListener {
             val action = FieldsFragmentDirections.actionFieldsFragmentToFieldCreatureFragment(fields)
             holder.itemView.findNavController().navigate(action)
+            Toast.makeText(holder.itemView.context,"${fields.family}", Toast.LENGTH_SHORT).show()
         }
     }
 

@@ -16,6 +16,9 @@
         <action
             android:id="@+id/action_categoryFragment_to_fieldsFragment"
             app:destination="@id/fieldsFragment" />
+        <action
+            android:id="@+id/action_categoryFragment_to_hillsFragment"
+            app:destination="@id/hillsFragment" />
     </fragment>
     <fragment
         android:id="@+id/lakesFragment"
@@ -52,5 +55,23 @@
         <argument
             android:name="fieldArgs"
             app:argType="edu.itesm.appchallenge.Fields" />
+    </fragment>
+    <fragment
+        android:id="@+id/hillsFragment"
+        android:name="edu.itesm.appchallenge.HillsFragment"
+        android:label="fragment_hills"
+        tools:layout="@layout/fragment_hills" >
+        <action
+            android:id="@+id/action_hillsFragment_to_hillCreatureFragment"
+            app:destination="@id/hillCreatureFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/hillCreatureFragment"
+        android:name="edu.itesm.appchallenge.HillCreatureFragment"
+        android:label="fragment_hill_creature"
+        tools:layout="@layout/fragment_hill_creature" >
+        <argument
+            android:name="hillsArgs"
+            app:argType="edu.itesm.appchallenge.Hills" />
     </fragment>
 </navigation>

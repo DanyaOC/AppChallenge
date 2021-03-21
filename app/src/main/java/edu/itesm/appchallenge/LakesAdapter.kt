@@ -5,6 +5,7 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.TextView
+import android.widget.Toast
 import androidx.navigation.findNavController
 import androidx.recyclerview.widget.RecyclerView
 
@@ -33,6 +34,7 @@ class LakesAdapter (private val lakes_list : List<Lakes>)
         holder.itemView.setOnClickListener {
             val action = LakesFragmentDirections.actionLakesFragmentToLakeCreatureFragment(lakes)
             holder.itemView.findNavController().navigate(action)
+            Toast.makeText(holder.itemView.context,"${lakes.family}", Toast.LENGTH_SHORT).show()
         }
     }
 

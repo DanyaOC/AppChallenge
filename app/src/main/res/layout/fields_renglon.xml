@@ -33,15 +33,19 @@
                 android:id="@+id/name"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:text="name"
                 android:textStyle="bold"
-                android:textColor="@color/purple_500"
-                android:text="name" />
+                android:textSize="20sp"
+                android:textColor="@color/brown" />
 
             <TextView
                 android:id="@+id/description"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="description" />
+                android:text="description"
+                android:textStyle="bold"
+                android:textSize="20sp"
+                android:textColor="@color/black" />
 
         </LinearLayout>
     </LinearLayout>
